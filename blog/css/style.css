@@ -1,0 +1,186 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        Spacing 
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* Imported fonts */
+
+/* Sans Serif */
+@font-face {
+    font-family:Lato;
+    src: url(../fonts/lato-regular.ttf);
+    font-style:normal;
+    font-weight:normal;
+}
+@font-face {
+    font-family:Montserrat;
+    src: url(../fonts/montserrat-regular.ttf);
+    font-style:normal;
+    font-weight:normal;
+}
+@font-face {
+    font-family:Open Sans;
+    src: url(../fonts/opensans-regular.ttf);
+    font-style:normal;
+    font-weight:normal;
+}
+@font-face {
+    font-family:Roboto;
+    src: url(../font/roboto-regular.ttf);
+    font-style:normal;
+    font-weight:normal;
+}
+
+/* Serif */
+@font-face {
+    font-family:Josefin Slab;
+    src: url(../fonts/josefinslab-regular.ttf);
+    font-style:normal;
+    font-weight:normal;
+}
+@font-face {
+    font-family:Roboto Slab;
+    src: url(../fonts/robotoslab-regular.ttf);
+    font-style:normal;
+    font-weight:normal;
+}
+@font-face {
+    font-family:Rozha One;
+    src: url(../fonts/rozhaone-regular.ttf);
+    font-style:normal;
+    font-weight:normal;
+}
+@font-face {
+    font-family:Ultra;
+    src: url(../fonts/ultra-regular.ttf);
+    font-style:normal;
+    font-weight:normal;
+}
+
+/* Root */
+html {
+    font-size:16px;
+}
+
+/* Body & Main  */
+body {
+    font-family:Lato, Arial, sans-serif;
+    font-size:1rem;
+    padding:1rem;
+    min-width:39rem;
+    max-width:50rem;
+    margin:0 auto;
+}
+main {
+    background-color:#ddd;
+    background-size:cover;
+    background-repeat: no-repeat;
+    border:1px solid #333;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size:6rem;
+    margin:0;
+    letter-spacing:0.5rem;
+    text-shadow:.09375rem .09375rem .09375rem #000;
+    font-family:'Alfa Slab One', Garamond, serif;
+    text-align:center;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size:3rem;
+    font-weight:normal;
+    margin:0;
+    letter-spacing:0.25rem; 
+    text-shadow:.09375rem .09375rem .09375rem #000;
+    font-family:'Alfa Slab One', Garamond, serif;
+    text-align:center;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size:2rem;
+    font-weight:normal;
+    margin:0;
+    letter-spacing:0.5rem;
+    color:rgb(32, 31, 31);
+    text-shadow:.09375rem .09375rem .09375rem #333;
+    font-family:'Alfa Slab One', Garamond, serif;
+    text-align:center;
+}
+
+section {
+    margin-top:0.5rem;    
+}
+
+p {
+    margin:1rem auto;
+    padding:0 1rem;
+    text-align:left;
+    width:90%;
+}
+
+img {
+    width:100%;
+    margin:0 auto;
+    max-width:50rem;
+}
+
+figure {
+    margin-bottom:2rem;
+}
+
+figcaption {
+    padding-top:0.5rem;
+    text-align:right;
+}
+
+.expand {
+    font-size:0.3rem;
+    text-align:left;
+}
+
+footer {
+    padding: 1rem;
+    border-top:2rem solid #333;
+}
