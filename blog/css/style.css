@@ -45,142 +45,287 @@
 
 /* Sans Serif */
 @font-face {
-    font-family:Lato;
-    src: url(../fonts/lato-regular.ttf);
-    font-style:normal;
-    font-weight:normal;
+    font-family: 'Lato';
+    src: url(../fonts/sans-serif/lato-regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
 }
 @font-face {
-    font-family:Montserrat;
-    src: url(../fonts/montserrat-regular.ttf);
-    font-style:normal;
-    font-weight:normal;
+    font-family: 'Montserrat';
+    src: url(../fonts/sans-serif/montserrat-regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
 }
 @font-face {
-    font-family:Open Sans;
-    src: url(../fonts/opensans-regular.ttf);
-    font-style:normal;
-    font-weight:normal;
+    font-family: 'OpenSans';
+    src: url(../fonts/sans-serif/opensans-regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
 }
 @font-face {
-    font-family:Roboto;
-    src: url(../font/roboto-regular.ttf);
-    font-style:normal;
-    font-weight:normal;
+    font-family: 'Roboto';
+    src: url(../fonts/sans-serif/roboto-regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
 }
 
 /* Serif */
 @font-face {
-    font-family:Josefin Slab;
-    src: url(../fonts/josefinslab-regular.ttf);
-    font-style:normal;
-    font-weight:normal;
+    font-family: 'JosefinSlab';
+    src: url(../fonts/serif/josefinslab-regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
 }
 @font-face {
-    font-family:Roboto Slab;
-    src: url(../fonts/robotoslab-regular.ttf);
-    font-style:normal;
-    font-weight:normal;
+    font-family: 'RobotoSlab';
+    src: url(../fonts/serif/robotoslab-regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
 }
 @font-face {
-    font-family:Rozha One;
-    src: url(../fonts/rozhaone-regular.ttf);
-    font-style:normal;
-    font-weight:normal;
+    font-family: 'RozhaOne';
+    src: url(../fonts/serif/rozhaone-regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
 }
 @font-face {
-    font-family:Ultra;
-    src: url(../fonts/ultra-regular.ttf);
-    font-style:normal;
-    font-weight:normal;
+    font-family: 'Ultra';
+    src: url(../fonts/serif/ultra-regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
 }
 
-/* Root */
+/* Typography */
+p {
+    font-family: Roboto, Montserrat, Verdana;
+}
+
+h1, h2, h3, h4 {
+    font-family: Lato, OpenSans, Arial;
+    letter-spacing: 0.0325rem;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 0.25rem;
+    transform: rotate(-5deg);
+    text-align: center;
+    text-shadow: 0.15rem 0.05rem 0.2rem  #353538;
+}
+
+.highlight {
+    display: inline-block;
+    font-family: Ultra, RozhaOne, Times New Roman;
+    border: 1px solid #1f1f26;
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: #BFC3C4;
+    background-color: #5F7F92;
+    box-shadow: 5px 5px 4px -1px #67676a;
+}
+
+/* General */
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-size:16px;
 }
 
-/* Body & Main  */
 body {
-    font-family:Lato, Arial, sans-serif;
-    font-size:1rem;
-    padding:1rem;
-    min-width:39rem;
-    max-width:50rem;
-    margin:0 auto;
-}
-main {
-    background-color:#ddd;
-    background-size:cover;
-    background-repeat: no-repeat;
-    border:1px solid #333;
+    margin: 1.5rem auto;
+    width: 90%;
+    min-width: 56.25rem;
+    line-height: 1.5rem;
 }
 
-h1 {
-    text-transform: uppercase;
-    font-size:6rem;
-    margin:0;
-    letter-spacing:0.5rem;
-    text-shadow:.09375rem .09375rem .09375rem #000;
-    font-family:'Alfa Slab One', Garamond, serif;
-    text-align:center;
+/* Layout  */
+
+header {
+    padding: 0.5rem 0rem 1rem 0rem;
 }
 
-h2 {
-    text-transform: uppercase;
-    font-size:3rem;
-    font-weight:normal;
-    margin:0;
-    letter-spacing:0.25rem; 
-    text-shadow:.09375rem .09375rem .09375rem #000;
-    font-family:'Alfa Slab One', Garamond, serif;
-    text-align:center;
+nav {
+    margin-top: 3rem;
 }
 
-h3 {
-    text-transform: uppercase;
-    font-size:2rem;
-    font-weight:normal;
-    margin:0;
-    letter-spacing:0.5rem;
-    color:rgb(32, 31, 31);
-    text-shadow:.09375rem .09375rem .09375rem #333;
-    font-family:'Alfa Slab One', Garamond, serif;
-    text-align:center;
+.main-section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
 }
 
-section {
-    margin-top:0.5rem;    
+article {
+    grid-column: 1 / 2;
+    grid-row: 1;
 }
 
-p {
-    margin:1rem auto;
-    padding:0 1rem;
-    text-align:left;
-    width:90%;
+aside {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-left: 1px solid #1f1f26;
+    padding-left: 1.5rem;
 }
 
+aside p {
+    border-bottom: 1px solid #1f1f26;
+    padding-bottom: 0.5rem;
+    font-size: smaller;
+    line-height: 1.125rem;
+}
+
+.subsection {
+    display: flex;
+}
+
+.title-1 {
+    color: #a04c34;
+}
+
+.title-2 {
+    color:#AC7F58;
+}
+
+.title-3 {
+    color:#BAA381;
+}
+
+/* Images and Figures */
 img {
-    width:100%;
-    margin:0 auto;
-    max-width:50rem;
+    width: 100%;
+
 }
 
 figure {
-    margin-bottom:2rem;
+    margin: 0px;
 }
 
-figcaption {
-    padding-top:0.5rem;
-    text-align:right;
+.article-image {
+    width: 33%;
+    float: left;
+    margin-right: 1rem;
+}
+
+.subsection {
+    margin: 2.5rem 0rem;
+}
+
+.subsection figure {
+    margin: 0rem 0.25rem;
+    background-color: #a04c34;
+}
+
+.subsection figure figcaption {
+    padding: 0.5rem 0.5rem;
+    font-family: Lato;
+    font-size: small;
+    color:#dfc7a4;
+}
+
+/* Links and Nav */
+a {
+    text-decoration: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 1.25rem 2rem;
+    font-size: 1.5rem;
+    font-family: Lato, OpenSans, Arial;
+    color: #a04c34
+}
+
+.blog {
+    color: #AC7F58;
+}
+
+.merch {
+    color: #BAA381;
+}
+
+.history {
+    color: #BFC3C4;
+}
+
+.contact {
+    color: #5F7F92;
+}
+
+a:hover {
+    text-transform: uppercase;
+}
+
+a:active {
+    color: #1f1f26;
+    text-decoration: line-through;
+}
+
+nav a:active {
+    transform: rotate(5deg);
+}
+
+nav {
+    border-top: 1px solid #1f1f26;
+    border-bottom: 1px solid #1f1f26;
+    text-align: center;
 }
 
 .expand {
-    font-size:0.3rem;
-    text-align:left;
+    font-size: 0.2rem;
+    text-align: left;
+}
+
+time {
+    font-style: italic;
+    font-size: small;
+    font-family: OpenSans;
+}
+
+button {
+    display: inline-block;
+    font-family: Ultra, RozhaOne, Times New Roman;
+    font-size:larger;
+    border: 1px solid #3f4b65;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    color: #cfd5d7;
+    background-color: #5F7F92;
+    box-shadow: 4px 4px 3px -1px #615f5f;
+    margin: 0.3rem 0rem;
+}
+
+.test {
+    width: 80rem; max-width: 100%; 
+}
+.test p { 
+    display: inline-block; max-width: 90%; 
+}
+.test p:nth-child(1) { 
+    float:left; 
+}
+.test p:nth-child(2) { 
+    float:right;
+}
+
+.test {
+    font-size: x-small;
+}
+
+.test a {
+    color:#5F7F92;
+}
+
+.test a:active {
+    color: #1f1f26;
+    text-decoration: line-through;
 }
 
 footer {
-    padding: 1rem;
-    border-top:2rem solid #333;
+    margin: 1.3rem  0rem;
+    
 }
+
+
